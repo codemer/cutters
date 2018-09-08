@@ -8,12 +8,16 @@ rim = 3;
 // Offset of models from center
 o = s*2+1;
 
+module circ1(s) {
+    circle(s, $fn=64);
+}
+
 module exp1(s,o) {
-    translate([o,o,0]) circle(s*2/3);
-    translate([-o,o,0]) circle(s*2/3);
-    translate([o,-o,0]) circle(s*2/3);
-    translate([-o,-o,0]) circle(s*2/3);
-    circle(s);
+    translate([o,o,0]) circ1(s*2/3);
+    translate([-o,o,0]) circ1(s*2/3);
+    translate([o,-o,0]) circ1(s*2/3);
+    translate([-o,-o,0]) circ1(s*2/3);
+    circ1(s);
 }
 
 module exp1_cutter(s) {
@@ -29,10 +33,10 @@ module exp1_cutter(s) {
 module exp2(s,o) {
     for (x = [-1:1]) {
         for (y = [-1:1]) {
-            translate([o*x,o*y,0]) circle(s*2/3);
+            translate([o*x,o*y,0]) circ1(s*2/3);
         }
     }
-    circle(s*1.2);
+    circ1(s*1.2);
 }
 
 module exp2_cutter(s) {
@@ -48,9 +52,9 @@ module exp2_cutter(s) {
 }
 
 module exp3(s,o) {
-    translate([o,o,0]) circle(s*2/3);
-    translate([-o,-o,0]) circle(s*2/3);
-    circle(s);
+    translate([o,o,0]) circ1(s*2/3);
+    translate([-o,-o,0]) circ1(s*2/3);
+    circ1(s);
 }
 
 module exp3_cutter(s) {
@@ -64,9 +68,9 @@ module exp3_cutter(s) {
 }
 
 module snowman(s,o) {
-    translate([0,o*1.2,0]) circle(s*3/4);
-    circle(s);
-    translate([0,-o*1.2,0]) circle(s*4/3);
+    translate([0,o*1.2,0]) circ1(s*3/4);
+    circ1(s);
+    translate([0,-o*1.2,0]) circ1(s*4/3);
 }
 
 module snowman_cutter(s) {
