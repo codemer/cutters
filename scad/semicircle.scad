@@ -12,8 +12,7 @@ module semicircle (rad) {
             cube([rad*2+4, rad+2,10],center=false);
         }
     }
+   translate([-rad-1,0,0]) cube([rad*2+2,1,1.5], center=false);
 }
 
 //semicircle(11);
-//translate([0,-1.5,0]) semicircle(8);
-//translate([0,-3,0]) semicircle(5);

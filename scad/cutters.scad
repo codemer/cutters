@@ -17,7 +17,7 @@ translate([35,35,0]) {
 translate([-35,-35,0]) {
     translate([0,3,0]) semicircle(21);
     semicircle(14);
-    translate([0,-2,0]) semicircle(8);
+    translate([0,-3,0]) semicircle(8);
 }
 translate([-45,-5,0]) semicircle(11);
 translate([-20,-5,0]) semicircle(6);
@@ -35,3 +35,4 @@ translate([52, -20, 0]) {
     squarec(20);
     translate([4, 4, 0]) squarec(12);
 }
+translate([52, -40, 0]) squarec(8);
