@@ -4,7 +4,7 @@ module half_eye (rad) {
 //    translate([-rad/2, 0, 0]) simple_circle(rad);
     difference() {
         translate([rad/2, 0, 0]) simple_circle(rad);
-        translate([0,-rad-4,-1]) cube([rad*2, rad*2+8, 10]);
+        translate([0,-rad-4,-1]) cube([rad*2, rad*2+base_height, base_height+2]);
     }
 }
 
